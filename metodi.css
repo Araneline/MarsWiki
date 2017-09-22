@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'PFDinTextPro-Regular';
+  src: url('fonts/PFDinTextPro-Regular.eot');
+  src: url('fonts/PFDinTextPro-Regular.eot?#iefix') format('eot'),
+       url('fonts/PFDinTextPro-Regular.woff') format('woff'),
+       url('fonts/PFDinTextPro-Regular.ttf') format('truetype'),
+       url('fonts/PFDinTextPro-Regular.svg') format('svg');
+}
+@font-face {
+  font-family: 'PFDinTextPro-Medium';
+  src: url('fonts/PFDinTextPro-Medium.eot');
+  src: url('fonts/PFDinTextPro-Medium.eot?#iefix') format('eot'),
+       url('fonts/PFDinTextPro-Medium.woff') format('woff'),
+       url('fonts/PFDinTextPro-Medium.ttf') format('truetype'),
+       url('fonts/PFDinTextPro-Medium.svg') format('svg');
+}
+@font-face {
+  font-family: 'EuropeExt';
+  src: url('EuropeExtBold.eot');
+  src: url('fonts/EuropeExtBold.eot?#iefix') format('eot'),
+       url('fonts/EuropeExtBold.woff') format('woff'),
+       url('fonts/EuropeExtBold.ttf') format('truetype'),
+       url('fonts/EuropeExtBold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  display: -webkit-flex;
+  -webkit-align-items: stretch;
+  -webkit-justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+p {
+  display: flex;
+  display: -webkit-flex;
+  font-family: PFDinTextPro-Regular;
+  color: rgb(195,246,249);
+  font-size: 1.15vw;
+}
+.flex_padding {
+  flex: 2;
+}
+#frame_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+#boxes_container {
+  height: 100%;
+  margin-right: 8.3vw;
+}
+.metod_box {
+  width: 100%;
+  height: calc(100%/3 - 11px);
+  background: rgb(10,18,21);
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+.metod_box + .metod_box {
+  margin-top: 10px;
+}
+.bordered-item {
+  border: 2px solid rgb(195,246,249);
+}
+.metod_box_container {
+  flex: 1;
+  margin: 3.95vh 4.67vw 3.37vh 4.67vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.metod_box_container img {
+  width: 15.3vh;
+  height: auto;
+}
+.metod_box_container p {
+    color: rgb(0,98,125);
+    font-size: 3vh;
+    margin: 0;
+    margin-left: 3.35vh;
+    text-align: justify;
+}
+.metod_box_container h2 {
+    color: rgb(195,246,249);
+    margin: 0;
+    margin-bottom: 3.87vh;
+    font-family: 'EuropeExt';
+    font-size: 3.4vh;
+    line-height: 2.7vh;
+}
+.metod_box_bottom {
+    display: flex;
+    align-items: center;
+}

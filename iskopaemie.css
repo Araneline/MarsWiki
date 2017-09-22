@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'PFDinTextPro-Regular';
+  src: url('fonts/PFDinTextPro-Regular.eot');
+  src: url('fonts/PFDinTextPro-Regular.eot?#iefix') format('eot'),
+       url('fonts/PFDinTextPro-Regular.woff') format('woff'),
+       url('fonts/PFDinTextPro-Regular.ttf') format('truetype'),
+       url('fonts/PFDinTextPro-Regular.svg') format('svg');
+}
+@font-face {
+  font-family: 'PFDinTextPro-Medium';
+  src: url('fonts/PFDinTextPro-Medium.eot');
+  src: url('fonts/PFDinTextPro-Medium.eot?#iefix') format('eot'),
+       url('fonts/PFDinTextPro-Medium.woff') format('woff'),
+       url('fonts/PFDinTextPro-Medium.ttf') format('truetype'),
+       url('fonts/PFDinTextPro-Medium.svg') format('svg');
+}
+@font-face {
+  font-family: 'EuropeExt';
+  src: url('EuropeExtBold.eot');
+  src: url('fonts/EuropeExtBold.eot?#iefix') format('eot'),
+       url('fonts/EuropeExtBold.woff') format('woff'),
+       url('fonts/EuropeExtBold.ttf') format('truetype'),
+       url('fonts/EuropeExtBold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  display: -webkit-flex;
+  -webkit-align-items: stretch;
+  -webkit-justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+p {
+  font-family: PFDinTextPro-Regular;
+  color: rgb(195,246,249);
+  font-size: 1.15vw;
+}
+.flex_padding {
+  flex: 2;
+}
+#iskopaemie_container {
+  flex: 19;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 8.3vw;
+}
+#title_frame {
+    flex: 1.5;
+    margin: 0;
+    font-family: 'EuropeExt';
+    font-size: 3.4vh;
+    line-height: 2.9vh;
+}
+#square_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.square {
+  height: 23.4vh;
+  display: flex;
+  justify-content: space-between;
+}
+.inside_square {
+  width: 23.4vh;
+  background: rgb(10,18,21);
+  display: flex;
+}
+.bordered-item {
+  border: 2px solid rgb(195,246,249);
+}
+.inside_square_container {
+  margin: 4.9vh 2.87vh 2.39vh 2.87vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.inside_square_container h3 {
+  font-family: 'EuropeExt';
+  font-size: 3.4vh;
+  line-height: 2.7vh;
+  color: rgb(195,246,249);
+  margin: 0;
+  flex: 1;
+}
+.inside_square_container div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#p_numbers {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.5vh;
+  margin: 0;
+}
+.inside_square_container div p + p {
+  margin: 0;
+  color: rgb(0,98,125);
+  font-size: 2.5vh;
+}
+.first_number {
+  color: rgb(255,255,255); 
+}
+.second_number {
+  color: rgb(250,114,14); 
+}
+.third_number {
+  color: rgb(255,241,0); 
+}
+.invisible_box {
+  visibility: hidden;
+}
+.block_container {
+  display: block !important;
+}

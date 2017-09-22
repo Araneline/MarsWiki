@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="wiki.css">
+	<title>Wiki</title>
+	<script type="text/javascript" src="libs/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div id="main_container">
+<div id="left_pad"></div>
+<div id="wiki_menu">
+	<div id="logo_container"><img src="images/mgw_logo.png" class="img-responsive" style="float: left;"></div>
+	<div class="flex_padding"></div>
+	<div id="wiki_menu_container" class="bordered-item">
+		<div id="menu_iskop" class="menu_item"><img src="images/ico_peeble.png" style="float: left;"><span style="float: left;"><p>Полезные</p><p>ископаемые</p></span></div>
+		<div class="menu_item"><img src="images/ico_mineral.png" style="float: left;"><span style="float: left;"><p>Горные</p><p>породы</p></span></div>
+		<div id="menu_minerali" class="menu_item"><img src="images/ico_rock.png" style="float: left;"><span style="float: left;"><p>Минералы</p></span></div>
+		<div id="menu_metodi" class="menu_item"><img src="images/ico_methods.png" style="float: left;"><span style="float: left;"><p>Методы</p><p>поиска</p></span></div>
+	</div>
+</div>
+<div id="wiki_main">
+	<p id="title_frame"></p>
+	<iframe id="myIframe" frameBorder="0" width="100%"></iframe>
+</div>
+</div>
+</body>
+</html>
+
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#menu_iskop').click(function(){
+			callFrame($(this));
+		});
+		
+		$('#menu_metodi').click(function(){
+			callFrame($(this));
+		});
+
+	});
+
+	function callFrame(e) {
+		id = e.attr('id');
+		var prev = $('.clicked');
+		if (prev[0] != undefined) {
+			prev.removeClass('clicked');
+			var src = prev.find('img').attr('src');
+			src = src.replace('_selected','');
+			prev.find('img').attr('src',src);
+		}
+		switch(id) {
+			case "menu_metodi":
+				$('#myIframe').attr('src', "metodi.html"); 
+				e.addClass('clicked');
+				e.find('img').attr('src','images/ico_methods_selected.png');
+				$('#title_frame').text('МЕТОДЫ ПОИСКА');
+				break;
+			case "menu_iskop":
+				$('#myIframe').attr('src', "iskopaemie.html"); 
+				e.addClass('clicked');
+				e.find('img').attr('src','images/ico_peeble_selected.png');
+				$('#title_frame').text('ПОЛЕЗНЫЕ ИСКОПАЕМЫЕ');
+				break;
+			default:
+				alert('s');
+				break;
+		}
+	}
+</script>

@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'PFDinTextPro-Regular';
+  src: url('fonts/PFDinTextPro-Regular.eot');
+  src: url('fonts/PFDinTextPro-Regular.eot?#iefix') format('eot'),
+       url('fonts/PFDinTextPro-Regular.woff') format('woff'),
+       url('fonts/PFDinTextPro-Regular.ttf') format('truetype'),
+       url('fonts/PFDinTextPro-Regular.svg') format('svg');
+}
+@font-face {
+  font-family: 'PFDinTextPro-Medium';
+  src: url('fonts/PFDinTextPro-Medium.eot');
+  src: url('fonts/PFDinTextPro-Medium.eot?#iefix') format('eot'),
+       url('fonts/PFDinTextPro-Medium.woff') format('woff'),
+       url('fonts/PFDinTextPro-Medium.ttf') format('truetype'),
+       url('fonts/PFDinTextPro-Medium.svg') format('svg');
+}
+@font-face {
+  font-family: 'EuropeExt';
+  src: url('EuropeExtBold.eot');
+  src: url('fonts/EuropeExtBold.eot?#iefix') format('eot'),
+       url('fonts/EuropeExtBold.woff') format('woff'),
+       url('fonts/EuropeExtBold.ttf') format('truetype'),
+       url('fonts/EuropeExtBold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  display: -webkit-flex;
+  -webkit-align-items: stretch;
+  -webkit-justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+p {
+  font-family: PFDinTextPro-Regular;
+  color: rgb(195,246,249);
+  font-size: 1.15vw;
+}
+.bordered-item {
+  border: 2px solid rgb(195,246,249);
+}
+#element_container {
+  height: 100%;
+  background: rgb(10,18,21);
+  margin-right: 8.3vw;
+  display: flex;
+}
+#inner_element {
+  margin: 7.82vh 7.09vw 6.28vh 7.09vw;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#inner_element img {
+  width: auto;
+  height: calc(100% - 4px);
+}
+#bottom_part {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#bottom_part p {
+  font-size: 2.65vh;
+  margin-bottom: 0;
+}
+#top_part {
+  display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex: 1;
+}
+#left_part, #right_part {
+    flex: 1;
+}
+#right_part img {
+  float: left;
+  height: 90%;
+}
+#right_part h2 {
+  margin: 0;
+  font-family: 'EuropeExt';
+  font-size: 3.4vh;
+  line-height: 2.9vh;
+  color: #fff;    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  padding-right: 9.86vw;
+}
+#right_part .cyan {
+  color: rgb(195,246,249);
+}
+#right_part .yellow {
+  color: rgb(255,241,0);
+}
+.sand {
+  color: rgb(178,144,98);
+  font-size: 2.5vw;
+}
+ul {
+  font-family: PFDinTextPro-Regular;
+  font-size: 2.65vh;
+  padding: 0;
+  padding-left: 2.5vw;
+  margin: 0;
+  color: rgb(195,246,249);
+}
