@@ -155,13 +155,6 @@ p {
 #myIframe {
     height: -webkit-fill-available;
 }
-#title_frame {
-    margin: 0;
-    margin-bottom: 3.87vh;
-    font-family: 'EuropeExt';
-    font-size: 3.4vh;
-    line-height: 2.7vh;
-}
 .clicked p {
   color: rgb(195,246,249) !important;
 }

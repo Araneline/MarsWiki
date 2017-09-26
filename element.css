@@ -117,3 +117,11 @@ ul {
   margin: 0;
   color: rgb(195,246,249);
 }
+#title_frame {
+    margin: 0;
+    margin-bottom: 3.87vh;
+    font-family: 'EuropeExt';
+    font-size: 3.4vh;
+    line-height: 2.7vh;
+    text-transform: uppercase;
+}

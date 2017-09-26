@@ -5,48 +5,65 @@
 <link rel="stylesheet" type="text/css" href="element.css">
 	<title>Wiki</title>
 	<script type="text/javascript" src="libs/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="libs/TextScramble.js"></script>
 </head>
 <body>
+	<p id="title_frame">НАЗВАНИЕ ЭЛЕМЕНТА</p>
 <div id="element_container" class="bordered-item">
 	<div id="inner_element">
 		<div id="top_part">
 			<div id="left_part">
-				<img src="images/materials/al.jpg" class="bordered-item">
+				<img id="element_image" src="images/materials/al.jpg" class="bordered-item">
 			</div>
 			<div id="right_part">
 				<div style="height: 25%;">
 					<img src="images/ico_gravi.png">
-					<h2 >42 - 54</h2>
+					<h2 id="gravi">000</h2>
 				</div>
 				<div style="height: 25%;">
 					<img src="images/ico_magni.png">
-					<h2 class="cyan">100</h2>
+					<h2 id="magni" class="cyan">000</h2>
 				</div>
 				<div style="height: 25%;">
 					<img src="images/ico_radi.png">
-					<h2 class="yellow">0</h2>
+					<h2 id="radi" class="yellow">000</h2>
 				</div>
 				<div style="height: 25%; display: flex; align-items: flex-end; justify-content: flex-start;">
 					<ul class="sand">
-						<li>Гироксенит (+ Li, Al)</li>
-						<li>Глина</li>
+						<!-- ГИРОКСЕНИТ + ГЛИНА -->
 					</ul>
 				</div>
 			</div>
 		</div>
 		<div id="bottom_part">
-			<p>Алюминий - элемент 13-й группы периодической таблицы химических элементов. Относится к группе легких металлов. Наиболее ораспространенный метал и третий по распространенности химический элемент в земной коре (после кислорода и кремния).<br>
-			Простое вещество алюминий - легкий. Парамагнитный метал серебьристо-белшого цвета. Легко поддающийся формовке, литью и механической обработке.
-			<br><br>
-			Используется при создании:
-			<ul>
-			<li>Обшивки станции</li>
-			<li>Запчастей</li>
-			<li>Прочее</li>
-			</ul>
-			</p>
+			ОПИСАНИЕ ЭЛЕМЕНТА
 		</div>
 	</div>
 </div>
 </body>
 </html>
+
+<script type="text/javascript">
+	$.getJSON("https://api.myjson.com/bins/dsrax", function( data ) {
+	  var items = [];
+	  $.each( data, function( key, val ) {
+	    switch (key) {
+	    	case "pic":
+	    		$('#element_image').attr('src',val);
+	    		break;
+	    	case "description":
+	    		ScrambleEffect('#bottom_part', ('<p>' + val + '</p>'));
+	    		break;
+	    	case "name":
+	    		ScrambleEffect('#title_frame', val);
+	    		break;
+	    	case "values":
+	    		ScrambleEffect('#gravi',''+val[1]['value']);
+	    		ScrambleEffect('#magni',''+val[1]['value']);
+	    		ScrambleEffect('#radi',''+val[0]['value']);
+	    	default:
+	    		break;
+	    }
+	  });
+	});
+</script>
